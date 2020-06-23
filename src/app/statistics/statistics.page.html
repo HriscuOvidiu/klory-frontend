@@ -1,0 +1,8 @@
+<app-menu></app-menu>
+
+<ion-content>
+    <h1>Information regarding the nutritional intake from <br>{{date}}</h1>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <app-info *ngIf="nutritionData" [foodData]="nutritionData"></app-info>
+</ion-content>
+<app-tabs></app-tabs>

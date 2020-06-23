@@ -1,0 +1,18 @@
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" (click)="goHome()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button *ngIf="!shouldShowCamera" tab="add" (click)="goToAddPage()">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button *ngIf="shouldShowCamera" tab="camera" (click)="takePicture()">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="logout" (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

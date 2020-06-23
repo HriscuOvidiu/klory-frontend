@@ -1,0 +1,14 @@
+:host {
+    .content {
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        ion-list {
+            width:100%;
+        }
+    }
+}

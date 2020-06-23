@@ -1,0 +1,9 @@
+<ion-content *ngIf="!loading">
+  <app-info [foodData]="foodData"
+            [imageUrl]="imageUrl"></app-info>
+
+  <div class="buttons">
+    <ion-button expand="full" (click)="onAdd()">Add</ion-button>
+    <ion-button expand="full" color="danger" (click)="close()">Cancel</ion-button>
+  </div>
+</ion-content>

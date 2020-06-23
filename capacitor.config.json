@@ -1,0 +1,12 @@
+{
+  "appId": "com.android.klory",
+  "appName": "klory",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "linuxAndroidStudioPath": "/snap/android-studio/current/android-studio/bin/studio.sh",
+  "server": {
+    "hostname": "127.0.0.1"
+  }
+}

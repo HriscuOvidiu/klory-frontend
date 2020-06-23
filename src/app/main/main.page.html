@@ -1,0 +1,30 @@
+<ion-app>
+  <app-menu></app-menu>
+  <ion-content scroll-events="true">
+    <div class="search">
+      <ion-item>
+        <ion-input (ionChange)="updateFilteredItems($event?.detail?.value)"></ion-input>
+      </ion-item>
+      <ion-datetime *ngIf="date"
+                    [value]="date.toISOString()" displayFormat="DD MM YYYY" display-timezone="utc" 
+                    (ionChange)="updateMemoryItems($event?.detail?.value)"></ion-datetime>
+    </div>
+    <div class="statistics-container">
+      <ion-button color="primary" class="statistics" (click)="goToStatistics()">Statistics</ion-button>
+    </div>
+    <ion-card *ngFor="let item of filteredItems" (click)="goToDetailsPage(item.id)">
+      <img [src]="item.imageUrl" />
+      <ion-card-header>
+        <ion-card-subtitle>{{item.amount}} g</ion-card-subtitle>
+        <ion-card-title>{{item.foodName}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <div *ngIf="!filteredItems.length" class="empty">
+      <img src="../../assets/empty.svg">
+      <p>Nothing to see here yet. Use the '+' button to add a new item.</p>
+    </div>
+  </ion-content>
+
+  <app-tabs></app-tabs>
+</ion-app>

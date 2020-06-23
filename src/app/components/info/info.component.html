@@ -1,0 +1,12 @@
+<div class="content">
+  <img *ngIf="imageUrl" [src]="imageUrl">
+
+  <ion-list>
+      <ng-container *ngFor="let key of objectKeys(foodData)">
+        <ion-item *ngIf="foodData[key]">
+          <ion-label>{{capitalize(key)}}</ion-label>
+          <ion-badge>{{normalize(foodData[key])}}</ion-badge>
+        </ion-item>
+      </ng-container>
+  </ion-list>
+</div>

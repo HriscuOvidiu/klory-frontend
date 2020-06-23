@@ -1,0 +1,16 @@
+<app-menu></app-menu>
+
+<ion-content>
+  <div class="content">
+    <ion-item>
+      <ion-input placeholder="Food Name"
+                 [(ngModel)]="foodName"></ion-input>
+    </ion-item>
+    <ion-buttons slot="primary">
+      <ion-button size="large" (click)="showDetails()">Search</ion-button>
+    </ion-buttons>
+  </div>
+</ion-content> 
+
+<app-tabs shouldShowCamera="true"
+          (openCamera)="takePicture()"></app-tabs>

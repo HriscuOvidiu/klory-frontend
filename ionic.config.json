@@ -1,0 +1,8 @@
+{
+  "name": "klory",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

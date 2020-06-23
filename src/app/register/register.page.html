@@ -1,0 +1,17 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="form">
+  <div class="inputs">
+    <ion-item>
+      <ion-input [(ngModel)]="username" type="text" placeholder="Username" size="30"></ion-input>
+    </ion-item>
+    <ion-item>    
+      <ion-input [(ngModel)]="password" type="password" placeholder="Password" size="30"></ion-input>
+    </ion-item>
+    <ion-item>   
+       <ion-input [(ngModel)]="email" type="email" placeholder="Email" size="30"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button size="large"
+              (click)="register()">Register</ion-button>
+</div>

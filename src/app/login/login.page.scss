@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .inputs {
+            margin: 30px;
+        }
+    }
+}
