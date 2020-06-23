@@ -11,6 +11,7 @@ import AuthService from '../services/auth.service';
 import KloryHttpService from '../services/klory-http.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import ToastHelper from '../helpers/toast.helper';
+import LoadingHelper from '../helpers/loading.helper';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import ToastHelper from '../helpers/toast.helper';
     HttpClient,
     KloryHttpService,
     AuthService,
-    ToastHelper
+    ToastHelper,
+    LoadingHelper
   ],
   declarations: [LoginPage]
 })

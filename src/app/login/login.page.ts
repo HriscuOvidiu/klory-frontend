@@ -42,6 +42,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem('user', JSON.stringify(res.body));
       this.router.navigate(['main']);
     } catch {
+      this.loadingHelper.dismiss();
       this.toastHelper.showErrorToast("Username and/or password are incorrect");
     }
   }

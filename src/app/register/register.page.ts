@@ -3,6 +3,7 @@ import AuthService from '../services/auth.service';
 import ToastHelper from '../helpers/toast.helper';
 import { Router } from '@angular/router';
 import { Config } from '@ionic/angular';
+import LoadingHelper from '../helpers/loading.helper';
 
 @Component({
   selector: 'app-register',
@@ -19,6 +20,7 @@ export class RegisterPage implements OnInit {
   constructor(private readonly router: Router,
               private readonly authService: AuthService,
               private readonly toastHelper: ToastHelper,
+              private readonly loadingHelper: LoadingHelper,
               private readonly config: Config) { }
 
   ngOnInit() {
@@ -42,11 +44,13 @@ export class RegisterPage implements OnInit {
       email: this.email
     }
     try { 
+      this.loadingHelper.showLoading();
       const res = await this.authService.register(data);
-
+      this.loadingHelper.dismiss();
       this.toastHelper.showNormalToast('Successfully registered!')
       this.router.navigate(['login']);
     } catch {
+      this.loadingHelper.dismiss();
       this.toastHelper.showErrorToast('Error while registering!');
     }
   }
