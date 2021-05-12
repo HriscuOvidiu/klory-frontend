@@ -32,7 +32,7 @@
     "@ionic/angular": "^5.0.0",
     "android": "0.0.8",
     "capacitor-datepicker": "0.0.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "cordova-plugin-camera": "^4.1.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
